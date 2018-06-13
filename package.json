@@ -1,0 +1,20 @@
+{
+  "name": "cloudfunction-es6-sample",
+  "version": "1.0.0",
+  "description": "Sample project to deploy ES6 project to Google Cloud Functions.",
+  "main": "src/helloWorld.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "init_server": "functions config set projectId gcloud-sample",
+    "kill_server": "functions kill",
+    "start_server": "functions start",
+    "stop_server": "functions stop",
+    "local_call": "functions call helloWorld",
+    "deploy": "cd src && gcloud functions deploy helloWorld --trigger-http",
+    "local_deploy": "cd src && functions deploy helloWorld --trigger-http"
+  },
+  "author": "Loïc PIREZ",
+  "license": "ISC"
+}
